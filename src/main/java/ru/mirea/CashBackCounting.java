@@ -1,8 +1,13 @@
 package ru.mirea;
 
 public class CashBackCounting {
-    private final int boundary = 1000;
+    private final int BOUNDARY = 1000;
     public int remain(int amount) {
-        return boundary - amount % boundary;
+        if (amount % BOUNDARY == 0) {
+            return 0;
+        } else {
+            return BOUNDARY - (amount % BOUNDARY);
+        }
     }
+
 }
