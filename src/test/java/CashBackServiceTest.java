@@ -1,5 +1,5 @@
-import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
 import ru.mirea.CashBackCounting;
 
@@ -10,7 +10,7 @@ public class CashBackServiceTest {
         CashBackCounting service = new CashBackCounting();
         int actual = service.remain(1000);
         int expected = 0; // Ожидаемый остаток должен быть равен 0
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -18,7 +18,7 @@ public class CashBackServiceTest {
         CashBackCounting service = new CashBackCounting();
         int actual = service.remain(0);
         int expected = 1000;
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -26,7 +26,7 @@ public class CashBackServiceTest {
         CashBackCounting service = new CashBackCounting();
         int actual = service.remain(1000);
         int expected = 1000;
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -34,7 +34,7 @@ public class CashBackServiceTest {
         CashBackCounting service = new CashBackCounting();
         int actual = service.remain(1500);
         int expected = 500;
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -42,7 +42,7 @@ public class CashBackServiceTest {
         CashBackCounting service = new CashBackCounting();
         int actual = service.remain(2000);
         int expected = 1000;
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 
     @Test
@@ -50,6 +50,6 @@ public class CashBackServiceTest {
         CashBackCounting service = new CashBackCounting();
         int actual = service.remain(2500);
         int expected = 500;
-        Assert.assertEquals(expected, actual);
+        assertEquals(expected, actual);
     }
 }
